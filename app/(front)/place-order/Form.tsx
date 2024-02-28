@@ -1,12 +1,12 @@
 'use client'
 import CheckoutSteps from '@/components/CheckoutSteps'
 import useCartService from '@/lib/hooks/useCartStore'
-import { useRouter } from 'next/navigation'
+import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import toast from 'react-hot-toast'
 import useSWRMutation from 'swr/mutation'
-import Image from 'next/image'
 
 const Form = () => {
   const router = useRouter()
@@ -133,7 +133,7 @@ const Form = () => {
                       <td>
                         <span>{item.qty}</span>
                       </td>
-                      <td>${item.price}</td>
+                      <td>Rp. {item.price}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -155,25 +155,25 @@ const Form = () => {
                 <li>
                   <div className=" flex justify-between">
                     <div>Items</div>
-                    <div>${itemsPrice}</div>
+                    <div>Rp. {itemsPrice}</div>
                   </div>
                 </li>
                 <li>
                   <div className=" flex justify-between">
                     <div>Tax</div>
-                    <div>${taxPrice}</div>
+                    <div>Rp. {taxPrice}</div>
                   </div>
                 </li>
                 <li>
                   <div className=" flex justify-between">
                     <div>Shipping</div>
-                    <div>${shippingPrice}</div>
+                    <div>Rp. {shippingPrice}</div>
                   </div>
                 </li>
                 <li>
                   <div className=" flex justify-between">
                     <div>Total</div>
-                    <div>${totalPrice}</div>
+                    <div>Rp. {totalPrice}</div>
                   </div>
                 </li>
 

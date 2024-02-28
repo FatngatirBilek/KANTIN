@@ -84,14 +84,14 @@ export default function OrderDetails({
         <div className="md:col-span-3">
           <div className="card bg-base-300">
             <div className="card-body">
-              <h2 className="card-title">Shipping Address</h2>
+              <h2 className="card-title">Alamat Tujuan</h2>
               <p>{shippingAddress.fullName}</p>
               <p>
                 {shippingAddress.address}, {shippingAddress.city},{' '}
                 {shippingAddress.postalCode}, {shippingAddress.country}{' '}
               </p>
               {isDelivered ? (
-                <div className="text-success">Delivered at {deliveredAt}</div>
+                <div className="text-success">Dikirim di {deliveredAt}</div>
               ) : (
                 <div className="text-error">Not Delivered</div>
               )}
@@ -141,7 +141,7 @@ export default function OrderDetails({
                         </Link>
                       </td>
                       <td>{item.qty}</td>
-                      <td>${item.price}</td>
+                      <td>Rp.{item.price}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -158,25 +158,25 @@ export default function OrderDetails({
                 <li>
                   <div className="mb-2 flex justify-between">
                     <div>Items</div>
-                    <div>${itemsPrice}</div>
+                    <div>Rp.{itemsPrice}</div>
                   </div>
                 </li>
                 <li>
                   <div className="mb-2 flex justify-between">
                     <div>Tax</div>
-                    <div>${taxPrice}</div>
+                    <div>Rp.{taxPrice}</div>
                   </div>
                 </li>
                 <li>
                   <div className="mb-2 flex justify-between">
                     <div>Shipping</div>
-                    <div>${shippingPrice}</div>
+                    <div>Rp.{shippingPrice}</div>
                   </div>
                 </li>
                 <li>
                   <div className="mb-2 flex justify-between">
                     <div>Total</div>
-                    <div>${totalPrice}</div>
+                    <div>Rp.{totalPrice}</div>
                   </div>
                 </li>
 

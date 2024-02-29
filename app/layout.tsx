@@ -2,6 +2,7 @@ import DrawerButton from '@/components/DrawerButton'
 import Providers from '@/components/Providers'
 import Sidebar from '@/components/Sidebar'
 import Header from '@/components/header/Header'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
@@ -28,6 +29,7 @@ export default function RootLayout({
               <div className="min-h-screen flex flex-col">
                 <Header />
                 {children}
+                <SpeedInsights/>
                 <footer className="footer footer-center p-4 bg-base-300 text-base-content">
                   <p>
                    Made with ❤️ - Fathir

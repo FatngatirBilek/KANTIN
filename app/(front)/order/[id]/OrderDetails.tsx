@@ -91,7 +91,7 @@ export default function OrderDetails({
                 {shippingAddress.postalCode}, {shippingAddress.country}{' '}
               </p>
               {isDelivered ? (
-                <div className="text-success">Dikirim{deliveredAt}</div>
+                <div className="text-success">Dikirim {deliveredAt}</div>
               ) : (
                 <div className="text-error">Belum dikirim</div>
               )}
@@ -103,7 +103,7 @@ export default function OrderDetails({
               <h2 className="card-title">Metode Pembayaran</h2>
               <p>{paymentMethod}</p>
               {isPaid ? (
-                <div className="text-success">Dibayar{paidAt}</div>
+                <div className="text-success">Dibayar {paidAt}</div>
               ) : (
                 <div className="text-error">Belum dibayar</div>
               )}

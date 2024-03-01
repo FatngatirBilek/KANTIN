@@ -103,7 +103,7 @@ export default function OrderDetails({
               <h2 className="card-title">Metode Pembayaran</h2>
               <p>{paymentMethod}</p>
               {isPaid ? (
-                <div className="text-success">Dibayar{paidAt}</div>
+                <div className="text-success">Dibayar {paidAt}</div>
               ) : (
                 <div className="text-error">Belum dibayar</div>
               )}

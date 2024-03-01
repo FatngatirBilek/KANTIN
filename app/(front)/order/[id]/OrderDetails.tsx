@@ -93,7 +93,7 @@ export default function OrderDetails({
               {isDelivered ? (
                 <div className="text-success">Dikirim{deliveredAt}</div>
               ) : (
-                <div className="text-error">Not Delivered</div>
+                <div className="text-error">Belum dikirim</div>
               )}
             </div>
           </div>
